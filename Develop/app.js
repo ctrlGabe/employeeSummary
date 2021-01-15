@@ -14,6 +14,88 @@ const render = require("./lib/htmlRenderer");
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
+const employeeQuestions = [
+    {
+      type: "list",
+      message: "What type of team member would you like to add?",
+      name: "membertype",
+      choices: [
+        "Engineer",
+        "Intern",
+        "I do not want to add any more team members",
+      ],
+    },
+];
+  
+const managerQuestions = [
+    {
+        type: "input",
+        message: "What is your manager's name?",
+        name: "managername",
+    },
+    {
+        type: "input",
+        message: "What is your manager's ID?",
+        name: "managerid",
+    },
+    {
+        type: "input",
+        message: "What is your manager's email?",
+        name: "manageremail",
+    },
+    {
+        type: "input",
+        message: "What is your manager's office phone number?",
+        name: "managerphone",
+    },
+];
+
+const engineerQuestions = [
+    {
+        type: "input",
+        message: "What is your engineer's name?",
+        name: "engineername",
+    },
+    {
+        type: "input",
+        message: "What is your engineer's ID?",
+        name: "engineerid",
+    },
+    {
+        type: "input",
+        message: "What is your engineer's email?",
+        name: "engineeremail",
+    },
+    {
+        type: "input",
+        message: "What is your engineer's Github username?",
+        name: "engineergithub",
+    },
+];
+
+const internQuestions = [
+    {
+        type: "input",
+        message: "What is your intern's name?",
+        name: "internname",
+    },
+    {
+        type: "input",
+        message: "What is your intern's ID?",
+        name: "internid",
+    },
+    {
+        type: "input",
+        message: "What is your intern's email?",
+        name: "internemail",
+    },
+    {
+        type: "input",
+        message: "What is your intern's school?",
+        name: "internschool",
+    },
+];
+
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
