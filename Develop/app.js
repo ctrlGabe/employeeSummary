@@ -10,15 +10,16 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+const employees = [];
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
-const employeeQuestions = [
+const employee = [
     {
       type: "list",
       message: "What type of team member would you like to add?",
-      name: "membertype",
+      name: "role",
       choices: [
         "Engineer",
         "Intern",
@@ -27,72 +28,72 @@ const employeeQuestions = [
     },
 ];
   
-const managerQuestions = [
+const manager = [
     {
         type: "input",
         message: "What is your manager's name?",
-        name: "managername",
+        name: "name",
     },
     {
         type: "input",
         message: "What is your manager's ID?",
-        name: "managerid",
+        name: "id",
     },
     {
         type: "input",
         message: "What is your manager's email?",
-        name: "manageremail",
+        name: "email",
     },
     {
         type: "input",
         message: "What is your manager's office phone number?",
-        name: "managerphone",
+        name: "phone",
     },
 ];
 
-const engineerQuestions = [
+const engineer = [
     {
         type: "input",
         message: "What is your engineer's name?",
-        name: "engineername",
+        name: "name",
     },
     {
         type: "input",
         message: "What is your engineer's ID?",
-        name: "engineerid",
+        name: "id",
     },
     {
         type: "input",
         message: "What is your engineer's email?",
-        name: "engineeremail",
+        name: "email",
     },
     {
         type: "input",
         message: "What is your engineer's Github username?",
-        name: "engineergithub",
+        name: "github",
     },
 ];
 
-const internQuestions = [
+const intern = [
     {
         type: "input",
         message: "What is your intern's name?",
-        name: "internname",
+        name: "name",
     },
     {
         type: "input",
         message: "What is your intern's ID?",
-        name: "internid",
+        name: "id",
     },
     {
         type: "input",
         message: "What is your intern's email?",
-        name: "internemail",
+        name: "email",
     },
     {
         type: "input",
         message: "What is your intern's school?",
-        name: "internschool",
+        name: "school",
     },
 ];
 
